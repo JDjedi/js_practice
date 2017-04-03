@@ -21,9 +21,9 @@ var sprintFunctions = {
     return input;
   },
 
-  compareArrays: function(){ 
-    var startArr = [1,2,4,3];
-    var diffArr = [1,2,3,4];
+  function compareArrays(){ 
+    var startArr = [1,2,3,4];
+    var diffArr = [1,2,5,6];
 
     if (startArr.length != diffArr.length){
       return false;
@@ -31,23 +31,56 @@ var sprintFunctions = {
 
     for (i=0; i < startArr.length; i++){
       if (startArr[i] === diffArr[i]){
-        //console.log(startArr[i] + " " + diffArr[i]);
+        continue;
       } else {
-        //console.log(startArr[i] + " " + diffArr[i]);
-      };
-      console.log(i)
-    };
+        return false;
+      }
+    }
+    
+    return true;
   },
 
-  fizzBuzz: function(){  
-    // your code here
+compareArrays();
+  function numberCounter(){
+    var count = 0;
+
+    for (count = 0; count <= 100; count++){
+      if (count % 5 == 0 && count % 3 == 0){
+        console.log("FizzBuzz");
+      }
+      else if (count % 3 == 0){
+        console.log("Fizz");
+      }
+      else if (count % 5 == 0){
+        console.log("Buzz");
+      }
+      else {
+        console.log(count);
+      }
+    }
+  }
+
+  numberCounter(count);
   },
 
   myMap: function(){  
-    // your code here
+    function doSomething(array){
+      array.forEach(function(element){
+        console.log(element);
+      });
+    }
+
+    function myMap(array, doSomething){
+      doSomething(array);
+    }
+
+
+    myMap([1,2,3,4], doSomething);
   },
 
   primes: function(){  
     // your code here
   },
 }
+
+
