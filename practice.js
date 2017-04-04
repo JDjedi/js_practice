@@ -1,10 +1,12 @@
+'use strict';
+
 function PeopleConstructor() {
-	this.sex = undefined;
-	this.politicalAffiliation = undefined; 
+  this.sex = undefined;
+  this.politicalAffiliation = undefined; 
 }
 
 var populateArray = function(PeopleConstructor){
-  personArray = [];
+  var personArray = [];
   
   while (personArray.length < 100){
     var person = new PeopleConstructor();
@@ -12,7 +14,26 @@ var populateArray = function(PeopleConstructor){
     person.politicalAffiliation = Math.random();
     personArray.push(person);
   }
-  console.log(personArray);
+  
+  sortPopulation(personArray);
+}
+
+var sortPopulation = function(personArray){
+  var right = [];
+  var left = [];
+  
+  personArray.forEach(function(element){
+    if (element.politicalAffiliation >= .5) {
+      right.push(element);
+    } else {
+      left.push(element);
+    }
+  });
+  
+  console.log(right);
+  console.log("");
+  console.log(left);
 }
 
 populateArray(PeopleConstructor);
+
