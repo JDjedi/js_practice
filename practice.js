@@ -2,7 +2,8 @@
 
 function PeopleConstructor() {
   this.sex = undefined;
-  this.politicalAffiliation = undefined; 
+  this.politicalAffiliation = undefined;
+  this.polarization = false;
 }
 
 var populateArray = function(PeopleConstructor){
@@ -14,25 +15,49 @@ var populateArray = function(PeopleConstructor){
     person.politicalAffiliation = Math.random();
     personArray.push(person);
   }
-  
-  //sortPopulationByIdeology(personArray);
-  politicalEventOne(personArray);
-  //sortPopulation(personArray);
+  displayPopulation(personArray);
+  politicalEvent(personArray);
 }
 
-var populationOverloadChecker = function(person){
+var populationPolarizationChecker = function(person){
   if (person.politicalAffiliation > 1) {
     person.politicalAffiliation = 1;
+    person.polarization = true;
     return person;
   } else if (person.politicalAffiliation < 0) {
     person.politicalAffiliation = 0;
+    person.polarization = true;
     return person;
   } else {
     return person;
   }
 }
 
-var sortPopulationByIdeology = function(personArray){
+var politicalEvent = function(personArray){
+  var digit = prompt("Please enter a digit: ");
+
+  personArray.forEach(function(element){
+    if (element.politicalAffiliation >= .5) {
+      element.politicalAffiliation = element.politicalAffiliation + parseFloat(digit);
+      populationPolarizationChecker(element);
+    } else {
+      element.politicalAffiliation = element.politicalAffiliation - parseFloat(digit);
+      populationPolarizationChecker(element);
+    }
+  });
+  displayPopulation(personArray);
+}
+
+//displays sorted population
+var displayPopulation = function(personArray){
+  personArray.sort(function(a, b) {
+    return parseFloat(b.politicalAffiliation) - parseFloat(a.politicalAffiliation);
+  });
+  console.log(personArray);
+  console.log("");
+}
+
+var displayPopulationByIdeology = function(personArray){
   var right = [];
   var left = [];
   
@@ -51,29 +76,11 @@ var sortPopulationByIdeology = function(personArray){
   console.log("");
 }
 
-var politicalEventOne = function(personArray){
-  personArray.forEach(function(element){
-    if (element.politicalAffiliation >= .5) {
-      element.politicalAffiliation = element.politicalAffiliation + .1;
-      populationOverloadChecker(element);
-    } else {
-      element.politicalAffiliation = element.politicalAffiliation - .1;
-      populationOverloadChecker(element);
-    }
-  });
-
-  sortPopulation(personArray);
-}
-
-var sortPopulation = function(personArray){
-  personArray.sort(function(a, b) {
-    return parseFloat(b.politicalAffiliation) - parseFloat(a.politicalAffiliation);
-  });
-  console.log(personArray);
-}
-
-
 populateArray(PeopleConstructor);
+
+
+
+
 
 
 
