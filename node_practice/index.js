@@ -1,8 +1,10 @@
 'use strict';
 
+var _ = require('lodash');
 var logger = require('./lib/logger');
 var sal = require('./lib/salutations');
 
-logger.log(sal.en);
-logger.log(sal.es);
+_.each(sal, function(sal){
+	logger.log(sal)
+})
 
