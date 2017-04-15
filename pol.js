@@ -6,7 +6,7 @@ function PeopleConstructor() {
   this.polarization = false;
 }
 
-var objPolSim = {
+var polSim = {
   populateArray: function(PeopleConstructor){
     var personArray = [];
     
@@ -40,10 +40,10 @@ var objPolSim = {
     personArray.forEach(function(element){
       if (element.politicalAffiliation >= .5) {
         element.politicalAffiliation = element.politicalAffiliation + parseFloat(digit);
-        objPolSim.populationPolarizationChecker(element);
+        polSim.populationPolarizationChecker(element);
       } else {
         element.politicalAffiliation = element.politicalAffiliation - parseFloat(digit);
-        objPolSim.populationPolarizationChecker(element);
+        polSim.populationPolarizationChecker(element);
       }
     });
     this.displayPopulation(personArray);
@@ -59,4 +59,9 @@ var objPolSim = {
   }
 }
 
-objPolSim.populateArray(PeopleConstructor);
+polSim.populateArray(PeopleConstructor);
+
+
+
+
+
