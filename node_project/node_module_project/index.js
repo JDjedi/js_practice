@@ -1,19 +1,95 @@
-module.exports = {
-	escape: function(html) {
-		return String(html)
-      .replace(/&/g, '&amp;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-	},
+<html>
+  <head>
+    <title>Texas State - Pros and Cons</title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        background-color: #ffffcc;
+      }
 
-  unescape: function(html) {
-    return String(html)
-      .replace(/&amp;/g, '&')
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, '\'')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>');
-  }
-};
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+
+      [class*="col-"] {
+          float: left;
+          padding: 15px;
+      }
+
+      li{
+        font-size: 18px;
+      }
+
+      img{
+        width: 100%;
+        height: auto; 
+      }
+
+      #page-title{
+        text-align: center;
+      }
+
+      #main-header-element{
+        border-width: 15%;
+        border-style: solid;
+        border-color: #4d0026;
+        box-sizing: border-box;
+        border-left: solid;
+        border-right: solid;
+        border-left-style: solid;
+        border-right-style: solid;
+        border-left-color: #4d0026;
+        border-right-color: #4d0026;
+        border-right-width: 15%;
+        border-left-width: 15%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="col-12">
+      <div class="col-4"></div>
+      <div class="col-4" id="main-header-element">
+        <div id="image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Texas_State_University-San_Marcos_primary_logo_vertical.png">
+        </div>
+        <div id="page-title">
+          <h1>A Closer Look</h1>
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <hr>
+
+    <div class="col-12">
+      <div class="col-6" id="list">
+        <h2>Pros</h2>
+        <ul>
+          <li>They'll accept you know matter how dumb you are</li>
+          <li>The women are half as smart which means they're half as likely to fillasce you</li>
+          <li>Its a good educational institution, I guess</li>
+          <li>River runs through it for some reason</li>
+        </ul>
+      </div>
+      <div class="col-6" id="list">
+        <h2>Cons</h2>
+        <ul>
+          <li>Likely to pickup a drinking and drug habit that will persist after college</li>
+          <li>STDs</li>
+          <li>Heap of debt you're likely to incur</li>
+          <li>Its Texas State</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+</html>

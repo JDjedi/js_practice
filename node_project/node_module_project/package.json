@@ -4,7 +4,7 @@
   "description": "My node mod made from scratch",
   "main": "nodeEE.js",
   "scripts": {
-    "test": "Hello world!"
+    "test": "mocha"
   },
   "keywords": [
     "Node.js",
