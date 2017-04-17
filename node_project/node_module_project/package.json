@@ -1,0 +1,18 @@
+{
+  "name": "node_mod",
+  "version": "1.0.0",
+  "description": "My node mod made from scratch",
+  "main": "nodeEE.js",
+  "scripts": {
+    "test": "Hello world!"
+  },
+  "keywords": [
+    "Node.js",
+    "Javascript"
+  ],
+  "author": "JD",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
