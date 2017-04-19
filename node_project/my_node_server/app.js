@@ -29,17 +29,6 @@ var server = http.createServer(function(req, res) {
       res.writeHead(404);
       res.end("404 Not Found");
     } else {
-      let myReq = {};
-      ["url", "method", "httpVersion", "headers"].forEach( (key) => {
-        myReq[key] = req[key];
-      });
-      myReq = JSON.stringify(myReq, null, 2);
-      let myRes = {};
-      ["statusMessage", "statusCode", "_header"].forEach( (key) => {
-        myRes[key] = res[key];
-      });
-      myRes = JSON.stringify(myRes, null, 2);
-
       res.writeHead(200, {"Content-Type": "text/html"});
       data = data.replace("{{ req }}", myReq);
       data = data.replace("{{ res }}", myRes);
