@@ -1,3 +1,6 @@
+
+
+<!DOCTYPE html>
 <html>
   <head>
     <title>Texas State - Pros and Cons</title>
@@ -92,4 +95,5 @@
     </div>
   </body>
 </html>
-</html>
+
+
