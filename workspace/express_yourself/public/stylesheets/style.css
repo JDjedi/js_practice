@@ -10,6 +10,8 @@ a {
 img {
 	display: block;
 	margin: auto;
+	width: 50%;
+	height: 50%;
 }
 
 h1 {
