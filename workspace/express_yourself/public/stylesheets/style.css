@@ -10,8 +10,8 @@ a {
 img {
 	display: block;
 	margin: auto;
-	width: 50%;
-	height: 50%;
+	width: 55%;
+	height: 55%;
 }
 
 h1 {
@@ -28,4 +28,8 @@ p {
 
 .container-2 {
 	text-align: center;
+}
+
+.skills-name {
+	text-align: left;
 }

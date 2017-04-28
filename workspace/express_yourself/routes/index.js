@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+const {skills} = require('../models/info')
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express Yourself' });
+  res.render('index', { title: 'JD\'s Portfolio Page', skills: skills });
 });
 
 module.exports = router;
