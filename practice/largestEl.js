@@ -1,10 +1,10 @@
 'use strict';
 
 function largestEl(array) {
-  var sorted_array = array.sort(function(a, b){return a - b});
+  var sortedArray = array.sort(function(a, b){return a - b});
   
-  var greatest_value = sorted_array.pop();
-  console.log(greatest_value);
+  var greatestValue = sorted_array.pop();
+  console.log(greatestValue);
 }
 
 

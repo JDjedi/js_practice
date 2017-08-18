@@ -1,7 +1,7 @@
 
 "use strict";
 
-function filter_list(list) {
+function filterList(list) {
 	var i;
 	for (i=0; i < list.length; i++){
 		if ((typeof list[i]) === 'string'){
@@ -13,6 +13,6 @@ function filter_list(list) {
 }
 
 
-//filter_list([1, 2, 'a', 'b'])
-//filter_list([1,'a','b',0,15])
-//filter_list([1,2,'aasf','1','123',123])
+//filterList([1, 2, 'a', 'b'])
+//filterList([1,'a','b',0,15])
+//filterList([1,2,'aasf','1','123',123])
