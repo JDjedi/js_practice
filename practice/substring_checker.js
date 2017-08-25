@@ -7,9 +7,9 @@ function solution(word, subWord) {
   var word_test = word.slice(subWordTestLength * -1);
 
   if (word_test === subWord){
-    console.log('True');
+    debug('True');
   } else {
-    console.log('False');
+    debug('False');
   }
 }
 

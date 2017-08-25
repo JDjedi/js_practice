@@ -7,7 +7,7 @@ function loudSnakeCase(sentence) {
   
   var spaced = puntuationized.replace(/ /g, "_");
   
-  console.log(spaced);
+  debug(spaced);
   
 }
 

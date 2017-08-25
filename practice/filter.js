@@ -9,10 +9,13 @@ function filterList(list) {
 		  i = i - 1;
 		}
 	}
+	debug(list);
 	return list;
 }
 
 
-//filterList([1, 2, 'a', 'b'])
-//filterList([1,'a','b',0,15])
-//filterList([1,2,'aasf','1','123',123])
+
+
+filterList([1, 2, 'a', 'b'])
+filterList([1,'a','b',0,15])
+filterList([1,2,'aasf','1','123',123])

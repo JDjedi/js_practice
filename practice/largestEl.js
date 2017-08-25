@@ -4,7 +4,7 @@ function largestEl(array) {
   var sortedArray = array.sort(function(a, b){return a - b});
   
   var greatestValue = sorted_array.pop();
-  console.log(greatestValue);
+  debug(greatestValue);
 }
 
 
