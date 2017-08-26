@@ -1,27 +1,34 @@
 
 "use strict";
 
-function compareArrays(array_1, array_2) {
-	var array_2_worker;
+function compareArrays(arrayOne, arrayTwo) {
+	var arrayTwoWorker;
+	var arrayTestCase = [];
 
-	if (array_1.length != array_2.length) {
+	if (arrayOne.length != arrayTwo.length) {
 		debug(false);
 	  return false;
 	}
 		
-
-
-	array_1.forEach(function(x){
-		
-		array_2_worker = array_2.shift()
-		if (x != array_2_worker) {
-			debug(false);
-			return false;
+	arrayOne.forEach(function(x){
+		arrayTwoWorker = arrayTwo.shift()
+		if (x != arrayTwoWorker) {
+			arrayTestCase.push(false);
 		} else {
-			debug(true);
+			arrayTestCase.push(true);
 		}
 	});
+
+	arrayTestCase.some(arrayIsFalse);
 }
 
-compareArrays([5, 5, 6, 5], [5, 5, 5, 5]);
+function arrayIsFalse(element, index, array) {
+	if (element != true) {
+		debug(false);
+		return false;
+	}
+}
+
+
+compareArrays([5, 5, 5, 5], [5, 5, 5, 5]);
 
