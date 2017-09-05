@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Tasks } from '../imports/api/tasks.js';
+import { Meteor } from 'meteor/meteor';
 import template from './todosList.html';
 
 
@@ -8,36 +9,52 @@ class TodosListCtrl {
   constructor($scope) { //Creates task list
     $scope.viewModel(this);
  
+    this.hideCompleted = false;
+ 
     this.helpers({
       tasks() {
-        return Tasks.find({}, {
-        	sort: {
-        		createdAt: -1
-        	}
+        const selector = {};
+ 
+        //If hide completed is checked, filter tasks
+        if (this.getReactively('hideCompleted')) {
+          selector.checked = {
+            $ne: true
+          };
+        }
+ 
+        // Show newest tasks at the top
+        return Tasks.find(selector, {
+          sort: {
+            createdAt: -1
+          }
         });
+       }, 
+      // show how many tasks remaining
+      incompleteCount() {
+        return Tasks.find({
+          checked: {
+            $ne: true
+          }
+        }).count();
+      },
+      currentUser() {
+        return Meteor.user();
       }
-    })
+    });
   }
 
 	addTask(newTask) { //creates the means to add to task list
-		Tasks.insert({
-			text: newTask,
-			createdAt: new Date
-		});
+    Meteor.call('tasks.insert', newTask);
 
 		this.newTask = '';
 	}
 
 	setChecked(task) {
-		Tasks.update(task._id, {
-			$set: {
-				checked: !task.checked
-			},
-		});
-	}
+    Meteor.call('tasks.setChecked', task._id, !task.checked);
+  }
 
 	removeTask(task) {
-		Tasks.remove(task._id);
+		Meteor.call('tasks.remove', task._id);
 	}
 }
 
