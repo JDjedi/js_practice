@@ -15,4 +15,3 @@ Task.propTypes = {
   // We can use propTypes to indicate it is required
   task: PropTypes.object.isRequired,
 };
-
