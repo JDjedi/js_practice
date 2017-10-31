@@ -24,6 +24,8 @@ shell-server@0.2.4            # Server-side component of the `meteor shell` comm
 iron:router
 accounts-ui
 accounts-password
+aldeed:autoform
+
 
 #erasaur:meteor-lodash
 #stolinski:stylus-multi
@@ -31,11 +33,10 @@ accounts-password
 #spiderable
 #fastclick
 #raix:handlebar-helpers
-#aldeed:collection2
-#aldeed:autoform
 #matb33:bootstrap-glyphicons
 #msavin:jetsetter
 #zimme:active-route
 #gwendall:auth-client-callbacks
 
 
+aldeed:collection2-core

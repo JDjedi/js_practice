@@ -1,5 +1,5 @@
 
-<template name='ApplicationLayout'>
+<template name='ListLayout'>
 	<nav>
 		<li>
 			<a href="/">Home</a>
@@ -14,8 +14,9 @@
 			{{> loginButtons}}
 		</li>
 	</nav>
+
 	<main>
-		{{> yield}}
+		{{> yield "list"}}
 	</main>
 </template>
 
