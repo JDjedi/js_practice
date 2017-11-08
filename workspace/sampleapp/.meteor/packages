@@ -25,18 +25,20 @@ iron:router
 accounts-ui
 accounts-password
 aldeed:autoform
+aldeed:simple-schema@1.5.3
 
 
-#erasaur:meteor-lodash
-#stolinski:stylus-multi
-#fortawesome:fontawesome
-#spiderable
-#fastclick
-#raix:handlebar-helpers
-#matb33:bootstrap-glyphicons
-#msavin:jetsetter
-#zimme:active-route
-#gwendall:auth-client-callbacks
+erasaur:meteor-lodash
+stolinski:stylus-multi
+fortawesome:fontawesome
+spiderable
+fastclick
+raix:handlebar-helpers
+matb33:bootstrap-glyphicons
+msavin:jetsetter
+zimme:active-route
+gwendall:auth-client-callbacks
 
 
-aldeed:collection2-core
+aldeed:collection2-core@2.0.1
+accounts-facebook
