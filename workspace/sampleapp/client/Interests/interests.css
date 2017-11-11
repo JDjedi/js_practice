@@ -1,5 +1,4 @@
 
-
 * {
 	box-sizing: border-box;
 }
@@ -22,3 +21,7 @@
     padding: 15px;
 }
 
+.image {
+	height: 50%;
+	width: 50%;
+}

@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
 
 import './index.html';
+import './index.css';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
