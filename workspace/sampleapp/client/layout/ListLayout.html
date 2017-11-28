@@ -1,25 +1,22 @@
 
 <template name='ListLayout'>
-
-	<div class="wrapper">
-		<nav class="navigationStyle">
-			<li>
-				<a href="/">Home</a>
-			</li>
-			<li>
-				<a href="/about">About</a>
-			</li>
-			<li>
-				<a href="/interests">Interests</a>
-			</li>
-			<li>
-				<a href="/list">Lists</a>
-			</li>
-			<li>
-				{{> loginButtons}}
-			</li>
-		</nav>
-	</div>
+	<nav class="col-4" id="navbar">
+		<li>
+			{{> loginButtons}}
+		</li>
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li>
+			<a href="/about">About</a>
+		</li>
+		<li>
+			<a href="/interests">Interests</a>
+		</li>
+		<li>
+			<a href="/list">Lists</a>
+		</li>
+	</nav>
 	<main>
 		{{> yield}}
 	</main>

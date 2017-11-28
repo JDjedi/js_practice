@@ -35,10 +35,11 @@ spiderable
 fastclick
 raix:handlebar-helpers
 matb33:bootstrap-glyphicons
-msavin:jetsetter
 zimme:active-route
 gwendall:auth-client-callbacks
 
 
 aldeed:collection2-core@2.0.1
 accounts-facebook
+meteortoys:allthings
+

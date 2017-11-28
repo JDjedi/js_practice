@@ -3,10 +3,19 @@ SimpleSchema.extendOptions(['autoform']);
 
 Lists = new Meteor.Collection('lists');
 
+Lists.allow({
+	insert: function(userId, doc) {
+		return !!userId;
+	}
+});
+
 ListSchema = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Name"
+		label: "Name",
+		autoValue: function() {
+			return this.userId
+		}
 	},
 
 	comment: {
@@ -14,16 +23,14 @@ ListSchema = new SimpleSchema({
 		label: "Comment"
 	},
 
-	id: {
-		type: Number,
-		label: "List ID"
-	},
-
 	createdAt: {
 		type: Date,
 		label: "Created At",
 		autoValue: function(){
 			return new Date()
+		},
+		autoform: {
+			type: "hidden"
 		}
 	}
 });

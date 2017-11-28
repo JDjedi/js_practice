@@ -4,3 +4,4 @@ import { render } from 'react-dom';
 
 import './list.html';
 
+Meteor.subscribe('lists');
