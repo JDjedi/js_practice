@@ -22,7 +22,11 @@
 }
 
 .image {
-	height: 50%;
-	width: 50%;
+	height: 85%;
+	width: 85%;
 }
 
+.image-2 {
+	height: 125%;
+	width: 125%;
+}

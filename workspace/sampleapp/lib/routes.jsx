@@ -10,9 +10,9 @@ Router.route('/about', function() {
 });
 
 Router.route('/list', function() {
-	this.layout('ListLayout');
-	this.render('list', {to: 'main'});
-	// this.render('listForm', {to: 'aside'});
+	this.layout('EmployeeLayout');
+	this.render('employee', {to: 'main'});
+	//this.render('listForm', {to: 'aside'});
 });
 
 Router.route('/interests', function() {

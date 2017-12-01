@@ -1,26 +1,30 @@
 import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
-Lists = new Meteor.Collection('lists');
+Employees = new Mongo.Collection('employees');
 
-Lists.allow({
+Employees.allow({
 	insert: function(userId, doc) {
 		return !!userId;
 	}
 });
 
-ListSchema = new SimpleSchema({
+EmployeeSchema = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Name",
-		autoValue: function() {
-			return this.userId
-		}
+		label: "Name"
 	},
 
-	comment: {
+
+
+	author: {
 		type: String,
-		label: "Comment"
+		autoValue: function() {
+			return this.userId
+		},
+		autoform: {
+			type: "hidden"
+		}
 	},
 
 	createdAt: {
@@ -35,4 +39,6 @@ ListSchema = new SimpleSchema({
 	}
 });
 
-Lists.attachSchema(ListSchema);
+Employees.attachSchema(EmployeeSchema);
+
+

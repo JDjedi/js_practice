@@ -2,6 +2,6 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
 
-import './list.html';
+import './employee.html';
 
-Meteor.subscribe('lists');
+Meteor.subscribe('employees');
