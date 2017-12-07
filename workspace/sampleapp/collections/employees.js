@@ -9,13 +9,29 @@ Employees.allow({
 	}
 });
 
+ Attribute = new SimpleSchema({
+ 	attributes: { type: Array },
+	'attributes.$': { type: Object },﻿
+	'attributes.$.skill': { type: String },
+	'attributes.$.rating': { type: String },
+ });
+
 EmployeeSchema = new SimpleSchema({
 	name: {
 		type: String,
 		label: "Name"
 	},
 
+	attributes: { type: Attribute },
 
+	mainLog: {
+		type: Boolean,
+		defaultValue: false,
+		optional: true,
+		autoform: {
+			type: "hidden"
+		}
+	},
 
 	author: {
 		type: String,

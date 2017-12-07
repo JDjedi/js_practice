@@ -41,5 +41,5 @@ gwendall:auth-client-callbacks
 
 aldeed:collection2-core@2.0.1
 accounts-facebook
-meteortoys:allthings
+#meteortoys:allthings
 

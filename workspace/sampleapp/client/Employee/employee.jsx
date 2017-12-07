@@ -5,3 +5,9 @@ import { render } from 'react-dom';
 import './employee.html';
 
 Meteor.subscribe('employees');
+
+Template.employeeLog.helpers({
+  info() {
+  	return db.employees.find({});
+  },
+});
