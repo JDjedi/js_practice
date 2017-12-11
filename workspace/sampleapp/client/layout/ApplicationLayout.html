@@ -1,7 +1,6 @@
 
 <template name='ApplicationLayout'>
-
-	<nav class="col-4" id="navbar">
+	<nav class="col-12" id="navbar">
 		<li>
 			{{> loginButtons}}
 		</li>
@@ -15,10 +14,9 @@
 			<a href="/interests">Interests</a>
 		</li>
 		<li>
-			<a href="/list">Employee Log</a>
+			<a href="/employee_log">Employee Log</a>
 		</li>
 	</nav>
-	<nav class="col-8"></nav>
 	<main>
 		{{> yield}}
 	</main>

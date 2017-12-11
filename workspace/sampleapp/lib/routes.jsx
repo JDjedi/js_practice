@@ -1,26 +1,21 @@
 
 Router.route('/', function() {
-	this.layout('ApplicationLayout');
 	this.render('index', {to: 'main'});
 });
 
 Router.route('/about', function() {
-	this.layout('ApplicationLayout');
 	this.render('about', {to: 'main'});
 });
 
-Router.route('/list', function() {
-	this.layout('EmployeeLayout');
-	this.render('employee', {to: 'main'});
-	//this.render('listForm', {to: 'aside'});
-});
-
 Router.route('/interests', function() {
-	this.layout('ApplicationLayout');
-	this.render('interests', {to:'main'});
+	this.render('interests', {to: 'main'});
 });
 
-// Router.configure({ //used to make a default template for all routes
-// 	layoutTemplate: 'ApplicationLayout'
-// });
+Router.route('/employee_log', function() {
+	this.render('employeeListTemplate', {to: 'main'});
+});
+
+Router.configure({ //used to make a default template for all routes
+	layoutTemplate: 'ApplicationLayout'
+});
 

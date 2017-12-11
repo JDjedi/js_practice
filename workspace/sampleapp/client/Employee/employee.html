@@ -1,12 +1,12 @@
 
-<template name="employee">
-	<div class="col-2"></div>
-	<div class="col-9">
-		<header>
-			<title>SampleApp - Lists</title>
-		</header>
+<template name="employeeListTemplate">
+	<head>
+		<title>SampleApp - Employee Log</title>
+	</head>
 
-		<body>
+	<body>
+		<div class="col-2"></div>
+		<div class="col-9">
 			<p>Time for a list!</p>
 			<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -14,15 +14,23 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-		</body>
-
-		<div class="new-employees-container">
-			{{> quickForm collection="Employees" id="insertEmployeeFrom" type="insert" class="new-employee-from"}}
+			<br>
+			{{> employeeDataInput }}
+			<br>
+			{{> employeeDataList }}
+			<div class="col-1"></div>
 		</div>
-	</div>
-	<div class="col-1"></div>
+	</body>
 </template>
 
-<template name="employeeLog">
-	{{> info}}
+
+<template name="employeeDataInput">
+<!-- 	<div class="new-employees-container">
+		{{> quickForm collection="Employees" type="insert"}}
+	</div> -->
+</template>
+
+<template name="employeeDataList">
+	<div class="employe-data-list">
+	</div>
 </template>

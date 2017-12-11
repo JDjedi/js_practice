@@ -1,6 +1,6 @@
 
 <template name='EmployeeLayout'>
-	<nav class="col-4" id="navbar">
+	<nav class="col-12" id="navbar">
 		<li>
 			{{> loginButtons}}
 		</li>
@@ -14,15 +14,13 @@
 			<a href="/interests">Interests</a>
 		</li>
 		<li>
-			<a href="/list">Employee log</a>
+			<a href="/employee_log">Employee log</a>
 		</li>
 	</nav>
-	<main>
-		{{> yield}}
-	</main>
 
-	<aside>
-		{{> yield "aside"}}
-	</aside>
+	<main>
+		{{> yield "employee"}}
+	</main>
 </template>
+
 
