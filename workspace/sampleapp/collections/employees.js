@@ -3,18 +3,18 @@ SimpleSchema.extendOptions(['autoform']);
 
 Employees = new Mongo.Collection('employees');
 
+// Attribute = new SimpleSchema({ //not submitting on the other page, must find a workaround
+// 	attributes: { type: Array },
+// 	'attributes.$': { type: Object },﻿
+// 	'attributes.$.skill': { type: String },
+// 	'attributes.$.rating': { type: String },
+// });
+
 Employees.allow({
 	insert: function(userId, doc) {
 		return !!userId;
 	}
 });
-
- Attribute = new SimpleSchema({
- 	attributes: { type: Array },
-	'attributes.$': { type: Object },﻿
-	'attributes.$.skill': { type: String },
-	'attributes.$.rating': { type: String },
- });
 
 EmployeeSchema = new SimpleSchema({
 	name: {
@@ -22,7 +22,7 @@ EmployeeSchema = new SimpleSchema({
 		label: "Name"
 	},
 
-	attributes: { type: Attribute },
+	// attributes: { type: Attribute },
 
 	mainLog: {
 		type: Boolean,
