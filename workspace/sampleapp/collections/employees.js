@@ -1,14 +1,20 @@
+
 import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
 Employees = new Mongo.Collection('employees');
 
-// Attribute = new SimpleSchema({ //not submitting on the other page, must find a workaround
-// 	attributes: { type: Array },
-// 	'attributes.$': { type: Object },﻿
-// 	'attributes.$.skill': { type: String },
-// 	'attributes.$.rating': { type: String },
-// });
+AttributeSchema = new SimpleSchema({ //not submitting on the other page, must find a workaround
+	skill: {
+		type: String,
+		label: "Skill"
+	},
+
+	rating: {
+		type: Number,
+		label: "Rating"
+	}
+});
 
 Employees.allow({
 	insert: function(userId, doc) {
@@ -22,7 +28,7 @@ EmployeeSchema = new SimpleSchema({
 		label: "Name"
 	},
 
-	// attributes: { type: Attribute },
+	attributes: { type: AttributeSchema },
 
 	mainLog: {
 		type: Boolean,

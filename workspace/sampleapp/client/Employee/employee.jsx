@@ -25,8 +25,7 @@ Template.employeeDataInput.events({
 
 		Employees.insert({
 			name: employeeNameVar,
-			// skill: employeeSkillVar, //these are not inserting because of the  
-			// rating: employeeRatingVar //attribute schema being wed inside the Emp schema
+			attributes: { skill: employeeSkillVar, rating: employeeRatingVar }
 		});
 	}
 });
