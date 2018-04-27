@@ -1,0 +1,28 @@
+body {
+	max-width: 425px;
+}
+
+#screen-output {
+	width: 412px;
+	height: 50px;
+	background-color: #bfbfbf;
+	border-style: groove;
+	border-width: 2px;
+	font-size: 50px;
+	text-align: right;
+	vertical-align: right;
+	line-height: 50px;
+}
+
+.button {
+	border-style: groove;
+	border-width: 2px;
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: #ff751a;
+	font-size: 25px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+}
