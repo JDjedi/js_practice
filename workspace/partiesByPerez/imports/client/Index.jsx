@@ -100,10 +100,8 @@ export default class Gallery extends React.Component {
 										</li>
 									</ul>
 								</div>
-
-								<div className="column">
-									<Contact />
-								</div>
+								
+								<Contact />
 							</section>
 
 							<footer id="footer">
