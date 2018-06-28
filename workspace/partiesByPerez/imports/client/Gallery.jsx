@@ -264,7 +264,9 @@ export default class Gallery extends React.Component {
 								himenaeos dictum proin dis purus integer mollis parturient eros
 								scelerisque dis libero parturient magnis.
 							</p>
-							<h3>Follow Me</h3>
+							<a href="/pricing" className="button">
+								Pricing 
+							</a>
 							<ul className="icons">
 								<li>
 									<a href="#" className="icon fa-twitter">
