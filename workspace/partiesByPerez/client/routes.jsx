@@ -5,6 +5,7 @@ import { mount } from "react-mounter";
 import App from "../imports/client/App";
 import Index from "../imports/client/Index";
 import Gallery from "../imports/client/Gallery";
+import Pricing from "../imports/client/Pricing";
 
 FlowRouter.route("/", {
   name: "Home",
@@ -20,6 +21,15 @@ FlowRouter.route("/Gallery", {
   action() {
     mount(App, {
       content: <Gallery />
+    });
+  }
+});
+
+FlowRouter.route("/Pricing", {
+  name: "Pricing",
+  action() {
+    mount(App, {
+      content: <Pricing />
     });
   }
 });

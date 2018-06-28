@@ -1,6 +1,7 @@
 import React from "react";
 
 import Contact from './Contact';
+import Pricing from './Pricing';
 
 export default class Gallery extends React.Component {
 	render() {
@@ -81,7 +82,10 @@ export default class Gallery extends React.Component {
 										purus integer mollis parturient eros scelerisque dis libero
 										parturient magnis.
 									</p>
-									<h3>Follow Me</h3>
+									<a href="/pricing" className="button">
+										Pricing 
+									</a>
+								
 									<ul className="icons">
 										<li>
 											<a href="#" className="icon fa-twitter">
