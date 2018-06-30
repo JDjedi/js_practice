@@ -10,6 +10,7 @@ import Pricing from "../imports/client/Pricing";
 FlowRouter.route("/", {
   name: "Home",
   action() {
+    window.scrollTo(0, 0);
     mount(App, {
       content: <Index />
     });
@@ -19,6 +20,7 @@ FlowRouter.route("/", {
 FlowRouter.route("/Gallery", {
   name: "Gallery",
   action() {
+    window.scrollTo(0, 0);
     mount(App, {
       content: <Gallery />
     });
@@ -28,6 +30,7 @@ FlowRouter.route("/Gallery", {
 FlowRouter.route("/Pricing", {
   name: "Pricing",
   action() {
+    window.scrollTo(0, 0);
     mount(App, {
       content: <Pricing />
     });
