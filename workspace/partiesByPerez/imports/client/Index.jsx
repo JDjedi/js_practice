@@ -20,7 +20,7 @@ export default class Gallery extends React.Component {
 							<section id="galleries">
 								<div className="gallery">
 									<header className="special">
-										<h2>Past Events</h2>
+										<h2>Events</h2>
 									</header>
 									<div className="content">
 										<div className="media">
