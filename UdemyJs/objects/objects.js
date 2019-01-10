@@ -99,7 +99,7 @@ let restaurant = {
             restaurant.seatParty(11)
         } else {
             console.log(`You may not seat additional guests, there is not enough room!`)
-            restaurant.removeParty(9)
+            restaurant.removeParty
         }
     },
 
