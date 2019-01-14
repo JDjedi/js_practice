@@ -1,13 +1,27 @@
 
-const notes = ['Note1', 'Note2', 'Note3' ]
-notes.push('Note4')
-notes.unshift('newNote5')
-notes.splice(3, 0, 'This is the new item')
-notes.pop()
-notes.unshift('note6')
-console.log(" ")
+const notes = [{
+  title: 'Workout',
+  body: 'Cardio Circuit'
+}, {
+  title: 'Coding Lesson',
+  body: 'Learn some more JS'
+}, {
+  title: 'Budget',
+  body: 'Balance checkbook'
+}]
 
-for(let count = 0; count <= notes.length; count++) {
-  console.log(`Index: ${count}[${notes[count]}]`)
-}
+// console.log(notes.indexOf({}))           // two objects DO NOT equal each other
+
+// let someObject = {}
+// let otherObject = someObject
+// console.log(someObject === otherObject ) // --> TRUE
+                                         // what makes them equal is if theyre 
+                                         // the exact same obj. in memory
+
+const index = notes.findIndex(function(note) {
+  return note.title === 'Budget'
+})
+
+console.log(index)
+
 
