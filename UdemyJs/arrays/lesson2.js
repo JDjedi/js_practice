@@ -10,11 +10,11 @@ const notes = [{
   body: 'Balance checkbook'
 }]
 
-// console.log(notes.indexOf({}))           // two objects DO NOT equal each other
+console.log(notes.indexOf({}))           // two objects DO NOT equal each other
 
-// let someObject = {}
-// let otherObject = someObject
-// console.log(someObject === otherObject ) // --> TRUE
+let someObject = {}
+let otherObject = someObject
+console.log(someObject === otherObject ) // --> TRUE
                                          // what makes them equal is if theyre 
                                          // the exact same obj. in memory
 
